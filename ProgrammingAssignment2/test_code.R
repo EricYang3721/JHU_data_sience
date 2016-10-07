@@ -1,0 +1,10 @@
+source("cachematrix.R")
+matrix_1 <- matrix(c(0.1,0,0,0,0.1,0,0,0,0.1), 3, 3)
+print("Matrix 1 before inverse is:")
+print(matrix_1)
+matrix_1_inverse<-makeCacheMatrix()
+matrix_1_inverse$set(matrix_1)
+cacheSolve(matrix_1_inverse)
+print("The invsersed matrix is:")
+print(matrix_1_inverse$getinverse())
+
